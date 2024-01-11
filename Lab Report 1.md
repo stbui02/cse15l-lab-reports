@@ -1,6 +1,7 @@
 # Lab Report 1
 ---
 ## **Examples for each of the commands `cd`, `ls`, and `cat`**
+
 **For `cd`**
 ---
 1. When using the command with no argument when in the ~/home directory does nothing, but if in "lecture1" cd brings us back to ~/home.
