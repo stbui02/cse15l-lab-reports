@@ -28,8 +28,22 @@ bash: cd: Hello.java: Not a directory
 **For `ls`**
 ---
 1. Using the `ls` command in the ~/home directory lists the folders in the workspace.
+```
+[user@sahara ~]$ ls
+lecture1
+[user@sahara ~]$
+```
 2. `ls lecture1/` lists the folders/files inside lecture1 without moving into the directory.
+```
+[user@sahara ~]$ ls lecture1/
+Hello.class  Hello.java  messages  README
+[user@sahara ~]$
+```
 3. `ls README` just prints "README", the name of the file, in the terminal.
-
+```
+[user@sahara ~/lecture1]$ ls README 
+README
+[user@sahara ~/lecture1]$
+```
 **For `cat`**
 ---
