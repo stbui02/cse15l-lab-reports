@@ -1,6 +1,6 @@
 # Lab Report 1
----
-## **Examples for each of the commands `cd`, `ls`, and `cat`**
+
+**Examples for each of the commands `cd`, `ls`, and `cat`**
 
 **For `cd`**
 ---
