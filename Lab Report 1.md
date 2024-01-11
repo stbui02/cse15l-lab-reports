@@ -5,6 +5,14 @@
 **For `cd`**
 ---
 1. When using the command with no argument when in the ~/home directory does nothing, but if in "lecture1" cd brings us back to ~/home.
+```
+[user@sahara ~]$ cd
+[user@sahara ~]$
+```
+```
+[user@sahara ~/lecture1]$ cd
+[user@sahara ~]$
+```
 2. `cd lecture1` brings us into the lecture1 folder.
 3. When using the command with a file as an argument, in this case a txt file, the command will return "Not a directory".
 
