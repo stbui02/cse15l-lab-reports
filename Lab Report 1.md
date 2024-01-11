@@ -14,7 +14,16 @@
 [user@sahara ~]$
 ```
 2. `cd lecture1` brings us into the lecture1 folder.
+```
+[user@sahara ~]$ cd lecture1/
+[user@sahara ~/lecture1]$
+```
 3. When using the command with a file as an argument, in this case a txt file, the command will return "Not a directory".
+```
+[user@sahara ~/lecture1]$ cd Hello.java 
+bash: cd: Hello.java: Not a directory
+[user@sahara ~/lecture1]$
+```
 
 **For `ls`**
 ---
