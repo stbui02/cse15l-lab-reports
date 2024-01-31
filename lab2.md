@@ -17,7 +17,6 @@ handleRequst(URI url) Method:
 * Values of Relevant Fields: chatHistory: A field in the ChatHandler class representing the chat history. It gets updated based on the actions performed in the handleRequest method.
 
 main(String[] args) Method:
-     * Argument: args: An array of strings representing the command-line arguments passed to the program.
+* Argument: args: An array of strings representing the command-line arguments passed to the program.
 
-   Values of Relevant Fields:
-     * port: An integer representing the port number for the server. It is parsed from the command-line arguments.
+* Values of Relevant Fields: port: An integer representing the port number for the server. It is parsed from the command-line arguments.
