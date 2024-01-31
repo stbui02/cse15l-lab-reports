@@ -41,8 +41,12 @@ Request for an Unknown Path (Not "/", Not "/add-message"):
 * No values of the ChatHandler class fields change in this case.
 * The method returns a "404 Not Found!" and does not change the chatHistory.
 
-These are the screenshots for part 3
+These are the screenshots for part 2
 ---
 ![Image](Lab 2 CD Into .ssh private.PNG)
 ![Image](Lab 2 CD into .ssh public.PNG)
 ![Image](Lab 2 Login No Pass.PNG)
+
+Part 3
+---
+Some things I learned for week 2 and 3 are what ssh keys are and how URLs can be used to interact with a server. SSH Keys are both public and private keys that authenticate and create a connection between a local machine and a remote server. As for URLs interacting with a server, I learned that there can be changes made to or added to the set of requests that change what is displayed on the screen.
