@@ -36,6 +36,7 @@ Request for "/add-message":
   * The `user` is collected through
     `url.getQuery().split("user=")[1]` 
   * The chatHistory is then updated by adding the new message with the user's name.
+
 Request for an Unknown Path (Not "/", Not "/add-message"):
 * No values of the ChatHandler class fields change in this case.
 * The method returns a "404 Not Found!" and does not change the chatHistory.
