@@ -41,7 +41,7 @@ Request for an Unknown Path (Not "/", Not "/add-message"):
 * No values of the ChatHandler class fields change in this case.
 * The method returns a "404 Not Found!" and does not change the chatHistory.
 
-These are the screenshots for part 2
+Part 2: Screenshots
 ---
 ![Image](Lab 2 CD Into .ssh private.PNG)
 ![Image](Lab 2 CD into .ssh public.PNG)
