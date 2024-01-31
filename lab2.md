@@ -44,5 +44,5 @@ Request for an Unknown Path (Not "/", Not "/add-message"):
 These are the screenshots for part 3
 ---
 ![Image](Lab 2 CD Into .ssh private.PNG)
-![Image](Lab 2 CD Into .ssh public.PNG)
+![Image](Lab 2 CD into .ssh public.PNG)
 ![Image](Lab 2 Login No Pass.PNG)
