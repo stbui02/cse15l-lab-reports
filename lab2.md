@@ -3,10 +3,7 @@
 **Part 1**
 ---
 This is the screenshot of my code.
-```
-[user@sahara ~]$ cd
-[user@sahara ~]$
-```
+![Image](Lab 2 Code Screenshot.PNG)
 ```
 [user@sahara ~/lecture1]$ cd
 [user@sahara ~]$
