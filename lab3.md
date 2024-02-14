@@ -79,6 +79,7 @@ find . -name
 find . -size
 find . -cmin
 ```
+`find. -type` searches for different file types depending on the user's input.
 
 For `find. -type` the two examples are:
 
@@ -99,6 +100,7 @@ $ find . -type d
 ./.git/objects/info
 ./.git/objects/pack
 ```
+For `-type d` it will find directories.
 
 2.
 ```
@@ -116,8 +118,10 @@ $ find . -type f
 ./.git/hooks/pre-commit.sample
 ./.git/hooks/pre-merge-commit.sample
 ```
+For `-type f` it will find files within the directories.
 This command prints out a lot more lines after this.
 
+`find. -name` searches for files based on their name.
 For `find. -name` the two examples are:
 
 1.
@@ -133,6 +137,7 @@ $ find . -name "*.txt"
 ./technical/911report/chapter-13.3.txt
 ./technical/911report/chapter-13.4.txt
 ```
+For `find . -name "*.txt"` this will search for all files with the .txt extension in the current directory.
 This command prints out a lot more lines after this.
 
 2. 
@@ -156,6 +161,8 @@ $ find . -name "chapter*"
 ./technical/911report/chapter-8.txt
 ./technical/911report/chapter-9.txt
 ```
+For `find . -name "chapter*"` this will search for all files starting with "chapter" in the current directory.
+
 
 For `find. -size` the two examples are:
 
@@ -165,7 +172,7 @@ Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
 $ find . -size +1M
 ./.git/objects/pack/pack-f3e64844a2bd252cbb7d4b547cb60beb349fd441.pack
 ```
-
+For `find. -size +1M` the command searches for files larger than 1 "mebibyte".
 2.
 ```
 Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
@@ -200,6 +207,7 @@ $ find . -size -1M
 ./technical/government/Post_Rate_Comm
 ./technical/plos
 ```
+For `find. -size -1M` the command searches for files smaller than 1 "mebibyte".
 
 For `find. -cmin` the two examples are:
 
@@ -219,3 +227,10 @@ $ find . -cmin -10
 ./.git/refs/remotes/origin
 ./.git/refs/remotes/origin/HEAD
 ```
+
+For both of the `find. -cmin` commands, they search for files created within the last however many minutes the user inputs.
+
+##CITATION
+
+I used the example provided in the Week 5 Lab Report instructions and just searched “find command-line options” on Google.
+After searching, I clicked on the first link https://man7.org/linux/man-pages/man1/find.1.html which provided me with everything I needed.
