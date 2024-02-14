@@ -79,6 +79,7 @@ find . -name
 find . -size
 find . -cmin
 ```
+---
 `find. -type` searches for different file types depending on the user's input.
 
 For `find. -type` the two examples are:
@@ -120,7 +121,7 @@ $ find . -type f
 ```
 For `-type f` it will find files within the directories.
 This command prints out a lot more lines after this.
-
+---
 `find. -name` searches for files based on their name.
 For `find. -name` the two examples are:
 
@@ -162,8 +163,7 @@ $ find . -name "chapter*"
 ./technical/911report/chapter-9.txt
 ```
 For `find . -name "chapter*"` this will search for all files starting with "chapter" in the current directory.
-
-
+---
 For `find. -size` the two examples are:
 
 1.
@@ -209,7 +209,7 @@ $ find . -size -1M
 ./technical/plos
 ```
 For `find. -size -1M` the command searches for files smaller than 1 "mebibyte".
-
+---
 For `find. -cmin` the two examples are:
 
 1. 
@@ -230,7 +230,7 @@ $ find . -cmin -10
 ```
 
 For both of the `find. -cmin` commands, they search for files created within the last however many minutes the user inputs.
-
+---
 ## CITATION
 
 I used the example provided in the Week 5 Lab Report instructions and just searched “find command-line options” on Google.
