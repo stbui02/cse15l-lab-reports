@@ -50,6 +50,7 @@ The issue here is in the for loop:
 arr[i] = newArray[arr.length - i - 1];
 ```
 The statement initializes "newArray" as an array of zeros and assigns this to arr[i]. This bug causes arr always to be written as an array of zeros instead of reversing.
+
 This is the fixed code below
 ```
 static int[] reversedFixed(int[] arr) {
@@ -60,4 +61,8 @@ static int[] reversedFixed(int[] arr) {
     return newArray;
   }
 ```
-
+The fixed code contains the corrected statement:
+```
+newArray[i] = arr[arr.length - i - 1];
+```
+This assigns the value of `arr[arr.length - i - 1]`, the reversed array, to newArray which is then returned.
