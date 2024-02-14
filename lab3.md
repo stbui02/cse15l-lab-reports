@@ -77,10 +77,12 @@ The four ways to use this command that I chose are:
 find . -type
 find . -name
 find . -size
-find . -exec
+find . -cmin
 ```
 
 For `find. -type` the two examples are:
+
+1.
 ```
 Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
 $ find . -type d
@@ -97,7 +99,8 @@ $ find . -type d
 ./.git/objects/info
 ./.git/objects/pack
 ```
-and
+
+2.
 ```
 Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
 $ find . -type f
@@ -114,3 +117,105 @@ $ find . -type f
 ./.git/hooks/pre-merge-commit.sample
 ```
 This command prints out a lot more lines after this.
+
+For `find. -name` the two examples are:
+
+1.
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -name "*.txt"
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-13.4.txt
+```
+This command prints out a lot more lines after this.
+
+2. 
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -name "chapter*"
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-2.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-5.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-8.txt
+./technical/911report/chapter-9.txt
+```
+
+For `find. -size` the two examples are:
+
+1.
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -size +1M
+./.git/objects/pack/pack-f3e64844a2bd252cbb7d4b547cb60beb349fd441.pack
+```
+
+2.
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -size -1M
+.
+./.git
+./.git/hooks
+./.git/info
+./.git/logs
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/objects
+./.git/objects/info
+./.git/objects/pack
+./.git/refs
+./.git/refs/heads
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/tags
+./lib
+./technical
+./technical/911report
+./technical/biomed
+./technical/government
+./technical/government/About_LSC
+./technical/government/Alcohol_Problems
+./technical/government/Env_Prot_Agen
+./technical/government/Gen_Account_Office
+./technical/government/Media
+./technical/government/Post_Rate_Comm
+./technical/plos
+```
+
+For `find. -cmin` the two examples are:
+
+1. 
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -cmin -1
+```
+
+2. 
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -cmin -10
+./.git/FETCH_HEAD
+./.git/logs/refs/remotes/origin/HEAD
+./.git/objects
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/HEAD
+```
