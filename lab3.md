@@ -70,3 +70,47 @@ This assigns the value of `arr[arr.length - i - 1]`, the reversed array, to newA
 ## Part 2
 ---
 
+I chose `find` for my command.
+The four ways to use this command that I chose are:
+
+```
+find . -type
+find . -name
+find . -size
+find . -exec
+```
+
+For `find. -type` the two examples are:
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -type d
+.
+./.git
+./.git/hooks
+./.git/info
+./.git/logs
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/objects
+./.git/objects/info
+./.git/objects/pack
+```
+and
+```
+Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
+$ find . -type f
+./.git/config
+./.git/description
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-merge-commit.sample
+```
+This command prints out a lot more lines after this.
