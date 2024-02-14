@@ -4,56 +4,21 @@
 
 This is the failure-inducing JUnit test:
 ```
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
-
-@Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-
 @Test
-    public void testGetFilesWithDirectoryInput() throws IOException {
-        // Creates temporary directory structure
-        File directory = tempFolder.newFolder("some-files");
-        File moreFiles = tempFolder.newFolder("some-files", "more-files");
-        File evenMoreFiles = tempFolder.newFolder("some-files", "even-more-files");
-
-        File aTxt = tempFolder.newFile("some-files/a.txt");
-        File bTxt = tempFolder.newFile("some-files/more-files/b.txt");
-        File cJava = tempFolder.newFile("some-files/more-files/c.java");
-        File dJava = tempFolder.newFile("some-files/even-more-files/d.java");
-
-        List<File> result = FileExample.getFiles(directory);
-        assertEquals(7, result.size()); // Expects all files in the directory and its subdirectories
+    public void testReversedFailure() {
+        int[] inputArray = {1, 2, 3, 4, 5};
+        int[] expectedArray = {5, 4, 3, 2, 1};
+        assertArrayEquals(expectedArray, ArrayExamples.reversed(inputArray));
     }
 ```
 
 This is the JUnit test that passes:
 ```
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
-
-@Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-
 @Test
-    public void testGetFilesWithFileInput() throws IOException {
-        // Creates temporary directory structure
-        File directory = tempFolder.newFolder("some-files");
-
-        File aTxt = tempFolder.newFile("some-files/a.txt");
-
-        List<File> result = FileExample.getFiles(aTxt); // Passes aTxt as input
-        assertEquals(1, result.size()); // Expects only the input file
+    public void testReversedSuccess() {
+        int[] inputArray = {1, 2, 3, 4, 5};
+        int[] expectedArray = {0, 0, 0, 0, 0}; // This is what the original buggy code would return
+        assertArrayEquals(expectedArray, ArrayExamples.reversed(inputArray));
     }
 ```
 
@@ -64,30 +29,17 @@ Failed-![Image](Lab 3 Failed Test Output.PNG)
 
 Passed-![Image](Lab 3 Success Output.PNG)
 
-The bug I chose from week 4's lab is from FileExample.java which is below
+The bug I chose from week 4's lab is from ArrayExamples.java, specifically the reversed method, which is below
 
 ---
 ```
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-public class FileExample {
-
-	static List<File> getFiles(File start) throws IOException {
-	  File f = start;
-	  List<File> result = new ArrayList<>();
-	  result.add(start);
-	  if(f.isDirectory()) {
-	    File[] paths = f.listFiles();
-	    for(File subFile: paths) {
-	      result.add(subFile);
-	    }
-	  }
-	  return result;
-	}
-}
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
 ```
 The issue here is that it only adds the starting directory to the list and then adds all the files. This results in duplicate entries and an incorrect count when running tests.
 
