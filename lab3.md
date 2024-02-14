@@ -242,4 +242,4 @@ For both of the `find. -cmin` commands, they search for files created within the
 ## CITATION
 
 I used the example provided in the Week 5 Lab Report instructions and just searched “find command-line options” on Google.
-After searching, I clicked on the first link [Link](https://man7.org/linux/man-pages/man1/find.1.html) which provided me with everything I needed.
+After searching, I clicked on the first [Link](https://man7.org/linux/man-pages/man1/find.1.html) which provided me with everything I needed.
