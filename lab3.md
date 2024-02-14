@@ -173,6 +173,7 @@ $ find . -size +1M
 ./.git/objects/pack/pack-f3e64844a2bd252cbb7d4b547cb60beb349fd441.pack
 ```
 For `find. -size +1M` the command searches for files larger than 1 "mebibyte".
+
 2.
 ```
 Steven@DESKTOP-1AA65ED MINGW64 ~/Documents/GitHub/docsearch (main)
