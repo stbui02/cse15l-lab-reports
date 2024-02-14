@@ -66,3 +66,7 @@ The fixed code contains the corrected statement:
 newArray[i] = arr[arr.length - i - 1];
 ```
 This assigns the value of `arr[arr.length - i - 1]`, the reversed array, to newArray which is then returned.
+
+## Part 2
+---
+
