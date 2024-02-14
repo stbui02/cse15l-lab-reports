@@ -62,7 +62,7 @@ Screenshots of the outputs from running the tests:
 Failed-![Image](Lab 3 Failed Test Output.PNG)
 
 
-Passed-![Image](Lab 3 Sucess Output.PNG)
+Passed-![Image](Lab 3 Success Output.PNG)
 
 The bug I chose from week 4's lab is from FileExample.java which is below
 
