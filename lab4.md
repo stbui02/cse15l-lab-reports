@@ -38,9 +38,10 @@
    This test was again run while in the `lab7/` directory. After typing `bash test.sh` and `enter` the screenshot above is printed and the test results are shown.
 ## 6. Adding and Committing Files
     
-   ![Image](Lab 4 Git add and commit.PNG)
+   ![Image](Lab 4 Git add commit push.PNG)
    
    To add and commit the changes made to `ListExamples.java` I typed:
-   1. `git add ListExamples.java`
-   2. `git commit -m "Commit for lab 7"`
-   This commits the files with the message "Commit for lab 7"
+   1. `git add ListExamples.java` This adds the file to the staging area.
+   2. `git commit -m "Commit for lab 7"` This commits the files with the message "Commit for lab 7".
+   3. `git push origin` This pushes the changes from the local repository to the remote repository the local repository was cloned from.
+
