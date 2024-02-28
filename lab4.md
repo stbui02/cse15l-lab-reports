@@ -10,7 +10,7 @@
    ![Image](Lab 4 bash test for fail.PNG)
 4. Edit Code for Success
 
-   ![Image](Lab Fixed Code.PNG)
+   ![Image](Lab 4 Fixed Code.PNG)
 5. Tests Demonstrating Success
 
    ![Image](Lab 4 bash test success.PNG)
