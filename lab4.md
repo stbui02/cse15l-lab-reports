@@ -16,6 +16,7 @@
    This test was run while in the `lab7/` directory. After typing `bash test.sh` and `enter` the screenshot above is printed and the test results are shown.
 ## 4. Edit Code for Success
    ![Image](Lab 4 Bugged Code.PNG)
+   
    ![Image](Lab 4 Fixed Code.PNG)
 
    
