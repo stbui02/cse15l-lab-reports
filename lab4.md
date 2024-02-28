@@ -40,3 +40,7 @@
     
    ![Image](Lab 4 Git add and commit.PNG)
    
+   To add and commit the changes made to `ListExamples.java` I typed:
+   1. `git add ListExamples.java`
+   2. `git commit -m "Commit for lab 7"`
+   This commits the files with the message "Commit for lab 7"
