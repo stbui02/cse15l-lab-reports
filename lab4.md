@@ -36,7 +36,7 @@
 
    This screenshot shows the test after fixing the buggy code.
    This test was again run while in the `lab7/` directory. After typing `bash test.sh` and `enter` the screenshot above is printed and the test results are shown.
-## 6. Adding and Committing Files
+## 6. Adding, Committing, and Pushing Files
     
    ![Image](Lab 4 Git add commit push.PNG)
    
