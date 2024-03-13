@@ -167,3 +167,6 @@ private static int calculateProduct(int[] numbers) {
     }
 ```
 As multiplying anything by 0 results in 0 the product being initialized to 0 causes that error.
+
+## Reflection
+The things I learned from this quarter are keyboard commands and bash/vim usage/tricks. Like the professor said one of the purposes of this class would be for us to develop "muscle memory" and I believe that is the main benefit I have gotten from this class. JUnit testing is also something I gained from this class as it was a completely new form of testing for me. Coming from the classes at community college I was never exposed to it.
