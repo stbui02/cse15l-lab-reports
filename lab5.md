@@ -31,3 +31,128 @@ The product is now calculated correctly, and I'm no longer getting a result of 0
 ![Image](Lab5 Report 1 Fixed 2.PNG) 
 
 Thank you!
+
+## 4. All the Info
+
+Lab5Report/
+  │
+  ├── compile_run.sh
+  │
+  ├── numbers.txt
+  │
+  ├── productCalculator.java
+  │
+  └── productCalculator.class
+
+In compile_run.sh
+```
+# Clear the contents of numbers.txt if it exists
+if [ -f "numbers.txt" ]; then
+    rm numbers.txt
+fi
+
+# Prompt the user for the size of the array
+read -p "Enter the size of the array: " size
+
+# Generate a file with random numbers in the current directory
+echo "Generating numbers..."
+for i in $(seq "$size"); do
+    number=$((RANDOM % 5 + 1)) 
+    echo $number >> numbers.txt
+done
+echo "Numbers generated and saved to numbers.txt"
+
+# Compile the Java program
+echo "Compiling productCalculator.java..."
+javac productCalculator.java
+
+# Check if compilation was successful
+if [ $? -eq 0 ]; then
+    echo "Compilation successful. Running program..."
+    # Run the Java program
+    java productCalculator
+else
+    echo "Compilation failed. Please check your code."
+fi
+```
+
+In productCalculator.java
+```
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class productCalculator {
+    public static void main(String[] args) {
+        int[] numbers = readNumbersFromFile("numbers.txt");
+        if (numbers != null) {
+            int product = calculateProduct(numbers);
+            System.out.println("Product: " + product);
+        } else {
+            System.out.println("Failed to read numbers from file.");
+        }
+    }
+
+    private static int[] readNumbersFromFile(String fileName) {
+        try {
+            File file = new File(fileName);
+            Scanner scanner = new Scanner(file);
+
+            int size = 0;
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                size++; 
+            }
+            scanner.close();
+
+            int[] numbers = new int[size];
+            scanner = new Scanner(file);
+            for (int i = 0; i < size; i++) {
+                numbers[i] = Integer.parseInt(scanner.nextLine());
+            }
+            scanner.close();
+
+            return numbers;
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!");
+            return null;
+        }
+    }
+
+    private static int calculateProduct(int[] numbers) {
+        int product = 0; //Error Here
+        for (int number : numbers) {
+            product *= number;
+        }
+        return product;
+    }
+    
+}
+```
+
+To run the code I used bash compile_run.sh.
+
+The change was made to this loop:
+
+```
+private static int calculateProduct(int[] numbers) {
+        int product = 0; //Error Here
+        for (int number : numbers) {
+            product *= number;
+        }
+        return product;
+    }
+```
+
+The fix:
+
+```
+private static int calculateProduct(int[] numbers) {
+        int product = 1; //Changed to 1
+        for (int number : numbers) {
+            product *= number;
+        }
+        return product;
+    }
+```
+As multiplying anything by 0 results in 0 the product being initialized to 0 causes that error.
