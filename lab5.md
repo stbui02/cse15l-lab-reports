@@ -35,14 +35,23 @@ Thank you!
 ## 4. All the Info
 
 Lab5Report/
+
   │
+  
   ├── compile_run.sh
+  
   │
+  
   ├── numbers.txt
+  
   │
+  
   ├── productCalculator.java
+  
   │
+  
   └── productCalculator.class
+  
 
 In compile_run.sh
 ```
