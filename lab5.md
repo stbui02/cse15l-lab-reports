@@ -34,6 +34,7 @@ Thank you!
 
 ## 4. All the Info
 
+The file & directory structure needed:
 Lab5Report/
 
   │
@@ -53,7 +54,7 @@ Lab5Report/
   └── productCalculator.class
   
 
-In compile_run.sh
+In compile_run.sh:
 ```
 # Clear the contents of numbers.txt if it exists
 if [ -f "numbers.txt" ]; then
@@ -85,7 +86,7 @@ else
 fi
 ```
 
-In productCalculator.java
+In productCalculator.java:
 ```
 import java.io.File;
 import java.io.FileNotFoundException;
