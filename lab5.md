@@ -13,4 +13,21 @@ I'm not sure what's causing this. I'll paste some images of the output below. An
 
 Thanks!
 
+## 2. TA's Response
 
+Hey there!
+
+Thanks for reaching out. If the code for the multiplication is correct then you may be initializing a variable to 0 in your calculateProduct method or the method you are using to generate numbers is creating 0's. 
+Multiplying any number by 0 will always result in 0. You may have to check for mathematical or initializing errors in your calculateProduct method.
+
+## 3. Bug Fix and Original Poster Response
+
+Hello [TA],
+
+Thank you for your suggestion! I originally initialized product to 0 and implemented the change of initializing product to 1 instead.
+The product is now calculated correctly, and I'm no longer getting a result of 0. I'll add some screenshots of the result after the changes below.
+
+![Image](Lab5 Report 1 Fixed 1.PNG)
+![Image](Lab5 Report 1 Fixed 2.PNG) 
+
+Thank you!
