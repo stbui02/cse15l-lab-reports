@@ -1,9 +1,7 @@
 # Lab Report 5
 ## 1. Original Post
-```
-Hello everyone,
 
-Hey everyone,
+Hello everyone,
 
 I've been working on this Java program, ProductCalculator, and I'm encountering an issue.
 When I run the program, it gives me an unexpected result for the product of the numbers.
@@ -15,5 +13,4 @@ I'm not sure what's causing this. I'll paste some images of the output below. An
 
 Thanks!
 
-```
 
